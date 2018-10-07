@@ -1,0 +1,48 @@
+Definition: A software entity(class,method etc) should only have a single responsibility. In other words A class should have only one 
+reason to change.Aim is separation of concerns.We could have various concerns like business logic,caching,
+logging,saving to DB etc. We want to separate these concerns so that each can be varied independently.Other
+way to put this is to say Each class should do one thing and do it well.
+
+public class UrlShortnerService{
+	private Connection dbConnection;
+	private long counter=1;
+	
+	public UrlShortnerService(Connection connection){
+		this.dbConnection=connection;
+	}
+	public String shortenUrl(String longUrl){
+		String shortUrl=new String(Base64.getEncoder().encode((counter + "").getBytes()));
+		String query="insert into url_mapping values (" + longUrl + "," + shortUrl + ")";
+		Statement statement =null;
+		try{
+			statement=dbConnection.createStatement();
+			statement.execute(query);
+		}
+		catch(SQLException e){
+			e.printStackTrace();
+		}
+		return shortUrl;
+	}
+
+Issues:
+(1)shortenUrl doing two task:generating short url and persisting it in DB
+(2)We are returning shortUrl even if DB throws exception
+(3)In future if we want to change key generating logic from Base64 encoding I have to modify this method.
+(4)In future if teams decides to use hibernate then you need to change this method .
+(5)If your table name changes, even then you need to modify this method(hence class).hence we have multiple reason
+to change this class and it is violation of SRP
+
+public class UrlShortnerService{
+	private KeyService keyService;
+	private UrlDao urlDao;
+	
+	public UrlShortnerService(KeyService keyService,UrlDao urlDao){
+		this.keyService=keyService;
+		this.urlDao=urlDao;
+	}
+	public String shortenUrl(String longUrl){
+		String shortenedUrl=keyService.generateKey(longUrl);
+		urlDao.saveUrlMapping(longUrl,shortenedUrl);
+		return shortenedUrl;
+	}
+
