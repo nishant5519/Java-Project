@@ -1,4 +1,4 @@
-package com.concurrency;
+package com.concurrency.blockingqueue;
 
 import java.util.LinkedList;
 import java.util.List;

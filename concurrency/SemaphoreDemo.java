@@ -1,4 +1,4 @@
-package com.concurrency;
+package com.concurrency.Semaphore;
 
 import java.util.concurrent.*;
 
@@ -7,8 +7,8 @@ public class SemaphoreDemo {
 	public static void main(String args[]) {
 		Semaphore sem = new Semaphore(1);
 		new IncThread(sem, "A");
-		sem.release();
-		System.out.println(sem.availablePermits());
+//		sem.release(); //makes one permit to two
+		System.out.println("Available permits are:" + sem.availablePermits());
 		new DecThread(sem, "B");
 		new DecThread(sem, "C");
 		

@@ -1,4 +1,4 @@
-package com.concurrency;
+package com.concurrency.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
