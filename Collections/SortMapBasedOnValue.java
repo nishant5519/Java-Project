@@ -19,19 +19,19 @@ public class SortMapBasedOnValue {
 		map.put("Java2Novice", 2);
 		map.put("Unix", 67);
 		map.put("MAC", 26);
-		map.put("Why this kolavari", 93);		
+		map.put("Why this kolavari", 93);
+
 		Set<Entry<String, Integer>> set = map.entrySet();
-		List<Entry<String, Integer>> list = new ArrayList<Entry<String, Integer>>(
-				set);
-		
-		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-			public int compare(Map.Entry<String, Integer> o1,
-					Map.Entry<String, Integer> o2) {
-				return (o2.getValue()).compareTo(o1.getValue());
+		List<Entry<String, Integer>> listOfSet = new ArrayList<>(set);
+		Collections.sort(listOfSet, new Comparator<Entry<String, Integer>>() {
+			@Override
+			public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
+				return o1.getValue().compareTo(o2.getValue());
 			}
+
 		});
-		for (Map.Entry<String, Integer> entry : list) {
-			System.out.println(entry.getKey() + " ==== " + entry.getValue());
+		for (Entry<String, Integer> entry : listOfSet) {
+			System.out.println("Key :" + entry.getKey() + ",Value :" + entry.getValue());
 		}
 	}
 

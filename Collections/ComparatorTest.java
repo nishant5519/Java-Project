@@ -43,11 +43,14 @@ public class ComparatorTest {
 		Comparator<Student> newComp=(Student o1,Student o2)->  o1.name.compareTo(o2.name);
 		//Valid statement below
 //		Comparator<Student> newComp=(o1,o2)->  o1.name.compareTo(o2.name);
+		//arrangement in decending order of age
+		Comparator<Student> ageComp = (Student o1, Student o2) -> (o1.age < o2.age) ? 1 : (o1.age > o2.age) ? -1 : 0;
 		System.out.println("Sorted using lambda expression");
 		//In Java 8, the List interface is supports the sort method directly, no need to use Collections.sort anymore.
-		al.sort(newComp);
+//		al.sort(newComp);
 		//reverse sorting below
-		al.sort(newComp.reversed());
+//		al.sort(newComp.reversed());
+		al.sort(ageComp);
 		//java 8 only, lambda also, to print the List
 		al.forEach((student)->System.out.println(student));
 	}
@@ -83,7 +86,7 @@ class AgeComparator implements Comparator<Student> {
 		else if (s1.age > s2.age)
 			return 1;
 		else
-			return 1;
+			return -11;
 	}
 
 }

@@ -1,7 +1,9 @@
 package com.Collections;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public class HashMapTest {
@@ -12,13 +14,15 @@ public class HashMapTest {
 		t.print("Hello World!!");
 		// one question ends
 
+		List<String> lstr=new ArrayList();
+		
 		// next question start
 		NewKeyClass nkc1 = new NewKeyClass("honeywell");
 		NewKeyClass nkc2 = new NewKeyClass("phoenix");
 		NewKeyClass nkc3 = new NewKeyClass("niagara");
 		NewKeyClass nkc4 = new NewKeyClass("novar");
 		NewKeyClass nkc5 = new NewKeyClass("alerton");
-		Map<NewKeyClass,Object> newMap = new HashMap<NewKeyClass,Object>();
+		Map<NewKeyClass, Object> newMap = new HashMap<NewKeyClass, Object>();
 		Object valueObj = new Object();
 		newMap.put(nkc1, valueObj);
 		newMap.put(nkc2, valueObj);
@@ -32,11 +36,10 @@ public class HashMapTest {
 
 		// next question starts
 		HashMapTest hwt = new HashMapTest();
-//		hwt.getvalue();
+		// hwt.getvalue();
 		// next question ends
-		
-		
-		Map<Integer,String> hm=new HashMap<>(16,2);
+
+		Map<Integer, String> hm = new HashMap<>(16, 2);
 		hm.put(0, "a");
 		hm.put(1, "A");
 		hm.put(2, "B");
@@ -56,6 +59,17 @@ public class HashMapTest {
 		hm.put(16, "Q");
 		hm.put(17, "R");
 		System.out.println(hm);
+		
+		System.out.println("**************************************************************");
+		
+		HashMap<Test1,String> hmap=new HashMap<>();
+		Test1 test1=new Test1(1);
+		Test1 test2=new Test1(1);
+		hmap.put(test1, "A");
+		hmap.put(test2, "B");
+		System.out.println("Value for key test1: " + hmap.get(test1));
+		System.out.println("Value for key test2: " + hmap.get(test2));
+		System.out.println("Size of hashmap is: " +hmap.size());
 
 	}
 
@@ -72,8 +86,16 @@ public class HashMapTest {
 class Test1 {
 	public int value;
 
+	public Test1(int v) {
+		this.value = v;
+	}
+
 	public int hashCode() {
-		return 42;
+		return 1;
+	}
+
+	public boolean equals(Object o) {
+		return false;
 	}
 }
 

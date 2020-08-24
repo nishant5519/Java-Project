@@ -11,6 +11,12 @@ import java.util.TreeSet;
 public class TreeSetExample {
 
 	public static void main(String[] args) {
+		
+		TreeSet<StringBuilder> trset=new TreeSet<StringBuilder>();
+		trset.add(new StringBuilder("ABC"));
+		trset.add(new StringBuilder("ABC"));//Gives exception as StringBuilder is not comparable
+		
+		
 		// Creating a TreeSet without supplying any Comparator
 		TreeSet<Integer> intset = new TreeSet<Integer>();
 		// Adding elements to TreeSet

@@ -6,15 +6,13 @@ import java.util.Set;
 
 import com.serialization.Employee;
 
-public class HashMapExample {	
-	Employee em1=new Employee();
+public class HashMapExample {
 	public static void main(String[] args) {
-		Employee em2=new Employee();
-		Employee em3=new Employee();
 		System.out.println(Employee.count);
-		HashMap<Integer, Integer> hm=new HashMap<Integer,Integer>();
+		HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
 		System.out.println(hm.put(null, -1));
-		System.out.println(hm.put(null, 0)); //second null will replace first null key value
+		System.out.println(hm.put(null, 0)); // second null will replace first
+												// null key value
 		System.out.println(hm.put(1, 1));
 		System.out.println(hm.put(2, 2));
 		System.out.println(hm.put(3, 3));
@@ -34,49 +32,52 @@ public class HashMapExample {
 		System.out.println(hm.put(17, 17));
 		System.out.println(hm.put(18, 18));
 		System.out.println(hm.put(19, 19));
-		Set<Integer> set=  hm.keySet();
+		Set<Integer> set = hm.keySet();
 		set.clear();
 		System.out.println(hm);
-		
+
 		System.out.println("===============================================");
-		
+
 		TestMapAsKey obj1 = new TestMapAsKey("Subrata");
 		TestMapAsKey obj2 = new TestMapAsKey("Subrata");
-	    Map<TestMapAsKey, String> map = new HashMap<TestMapAsKey, String>();
-	    System.out.println(obj1.hashCode());
-	    System.out.println(obj2.hashCode());
-	    map.put(obj1, "ABC");
-	    map.put(obj2, "XYZ");
-	    obj1.setName("Sapient");
-	    obj2.setName("Modified");
-	    System.out.println(obj1.hashCode());
-	    System.out.println(obj2.hashCode());
-	    System.out.println(map.get(obj1));// ??
-	    System.out.println(map.get(obj2));// ??
+		Map<TestMapAsKey, String> map = new HashMap<TestMapAsKey, String>();
+		System.out.println(obj1.hashCode());
+		System.out.println(obj2.hashCode());
+		map.put(obj1, "ABC");
+		map.put(obj2, "XYZ");
+		obj1.setName("Sapient");
+		obj2.setName("Modified");
+		System.out.println(obj1.hashCode());
+		System.out.println(obj2.hashCode());
+		System.out.println(map.get(obj1));// ??
+		System.out.println(map.get(obj2));// ??
 	}
 
 }
 
-class TestMapAsKey{
-	 String name;
-	  public TestMapAsKey(String name) {
-	    this.name = name;
-	  }
-	  public void setName(String name) {
-	    this.name = name;
-	  }
-	  public String getName() {
-	    return name;
-	  }
+class TestMapAsKey {
+	String name;
+
+	public TestMapAsKey(String name) {
+		this.name = name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		System.out.println("name:" + name);
-		System.out.println(result);
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -93,6 +94,5 @@ class TestMapAsKey{
 			return false;
 		return true;
 	}
-	  
-	 
-	}
+
+}
