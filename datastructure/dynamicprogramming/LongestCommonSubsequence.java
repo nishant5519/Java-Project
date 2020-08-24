@@ -1,5 +1,7 @@
 package com.datastructure.dynamicprogramming;
 
+import java.util.Arrays;
+
 public class LongestCommonSubsequence {
 
 	//Using Recursion
@@ -16,33 +18,65 @@ public class LongestCommonSubsequence {
 		}
 	}
 
-	//Adding Memoization. Time complexity O(mn) Space Complexity O(mn)
-	public int lcsDynamic(char str1[], char str2[]) {
-		int temp[][] = new int[str1.length + 1][str2.length + 1];
-		int max = 0;
-		for (int i = 1; i < temp.length; i++) {
-			for (int j = 1; j < temp[i].length; j++) {
-				if (str1[i - 1] == str2[j - 1]) {
-					temp[i][j] = temp[i - 1][j - 1] + 1;
-				} else {
-					temp[i][j] = Math.max(temp[i][j - 1], temp[i - 1][j]);
-				}
-				if (temp[i][j] > max) {
-					max = temp[i][j];
-				}
-			}
-		}
-		return max;
+	private static int findSequenceUsingTabulation(String s1, String s2) {
+		int l1 = s1.length();
+		int l2 = s2.length();
 
+		int dp[][]=new int[l1+1][l2+1];
+
+		for (int i=0;i<=l1;i++)
+			dp[i][0] = 0;
+
+		for (int i=0;i<=l2;i++)
+			dp[0][i] = 0;
+
+		for(int i=1;i<=l1;i++){
+			for(int j=1;j<=l2;j++){
+				if(s1.charAt(i-1) == s2.charAt(j-1))
+					dp[i][j] = 1 + dp[i-1][j-1];
+				else
+					dp[i][j] = Math.max(dp[i][j-1] , dp[i-1][j]);
+			}
+
+		}
+
+		return dp[l1][l2];
+	}
+
+
+	//Adding Memoization. Time complexity O(mn) Space Complexity O(mn)
+	private static int findSequenceUsingMemoization(String s1, String s2, int l1, int l2, int[][] dp) {
+
+		if (dp[l1][l2] != -1)
+			return dp[l1][l2];
+		if (l1 == 0 || l2 == 0)
+			dp[l1][l2] = 0;
+
+		else if (s1.charAt(l1 - 1) == s2.charAt(l2 - 1))
+			dp[l1][l2] = 1 + findSequenceUsingMemoization(s1, s2, l1 - 1, l2 - 1, dp);
+		else
+			dp[l1][l2] = Math.max(findSequenceUsingMemoization(s1, s2, l1, l2 - 1, dp), findSequenceUsingMemoization(s1, s2, l1 - 1, l2, dp));
+
+		return dp[l1][l2];
 	}
 
 	public static void main(String args[]) {
-		LongestCommonSubsequence lcs = new LongestCommonSubsequence();
-		String str1 = "ABCDGHLQR";
-		String str2 = "AEDPHR";
+		String s1 = "abcde";
+		String s2 = "be";
+		int l1 = s1.length();
+		int l2 = s2.length();
 
-		int result = lcs.lcsDynamic(str1.toCharArray(), str2.toCharArray());
-		System.out.print(result);
+		int[][] arr = new int[l1 + 1][l2 + 1];
+
+		// assign -1 to all positions
+		for (int[] row : arr) {
+			Arrays.fill(row, -1);
+		}
+
+		// System.out.print(findSequenceUsingMemoization(s1, s2, l1, l2, arr));
+		//   System.out.print(findSequence(s1,s2,l1,l2));
+		System.out.print(findSequenceUsingTabulation(s1, s2));
+
 	}
 
 }
