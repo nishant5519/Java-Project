@@ -1,0 +1,84 @@
+Definition:As per the principle, the functions that use references to the base classes must be able to use 
+objects of derived class without knowing it.In a computer program, if S is a subtype of T, then objects of 
+type T may be replaced with objects of type S
+
+class TrasportationDevice
+{
+   String name;
+   String getName() { ... }
+   void setName(String n) { ... }
+
+   double speed;
+   double getSpeed() { ... }
+   void setSpeed(double d) { ... }
+   
+   Engine engine;
+   Engine getEngine() { ... }
+   void setEngine(Engine e) { ... }
+
+   void startEngine() { ... }
+}
+
+There is no problem here, right? A car is definitely a transportation device, and here we can see that it 
+overrides the startEngine()  method of its superclass.
+
+class Car extends TransportationDevice
+{
+   @Override
+   void startEngine() { ... }
+}
+
+Everything isn’t going as planned now! Yes, a bicycle is a transportation device, however, it does not 
+have an engine and hence, the method startEngine() cannot be implemented.
+
+class Bicycle extends TransportationDevice
+{
+   @Override
+   void startEngine() /*problem!*/
+}
+
+These are the kinds of problems that violation of Liskov Substitution Principle leads to, and they can most 
+usually be recognized by a method that does nothing, or even can’t be implemented.The solution to these 
+problems is a correct inheritance hierarchy, and in our case we would solve the problem by differentiating 
+classes of transportation devices with and without engines.In this example our definition of transportation 
+device is wrong. It should not have an engine.
+
+class TrasportationDevice
+{
+   String name;
+   String getName() { ... }
+   void setName(String n) { ... }
+
+   double speed;
+   double getSpeed() { ... }
+   void setSpeed(double d) { ... }
+}
+
+class DevicesWithoutEngines extends TransportationDevice
+{  
+   void startMoving() { ... }
+}
+
+class DevicesWithEngines extends TransportationDevice
+{  
+   Engine engine;
+   Engine getEngine() { ... }
+   void setEngine(Engine e) { ... }
+
+   void startEngine() { ... }
+}
+
+class Car extends DevicesWithEngines
+{
+   @Override
+   void startEngine() { ... }
+}
+
+class Bicycle extends DevicesWithoutEngines
+{
+   @Override
+   void startMoving() { ... }
+}
+
+ If you’re writing objects which extend classes, but fails the ‘Is-A’ test, you’re likely violating the 
+ Liskov Substitution Principle.

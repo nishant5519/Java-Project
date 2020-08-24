@@ -1,0 +1,60 @@
+Definition:Clients should not be forced to depend on methods that they do not use.Here, the term 
+“Clients” refers to the implementing classes of an interface.What the Interface Segregation Principle says 
+is that your interface should not be bloated with methods that implementing classes don’t require. For such 
+interfaces, also called “fat interfaces”, implementing classes are unnecessarily forced to provide 
+implementations (dummy/empty) even for those methods that they don’t need.The Interface Segregation 
+Principle advocates segregating a “fat interface” into smaller and highly cohesive interfaces, known as 
+“role interfaces”. Each “role interface” declares one or more methods for a specific behavior. Thus clients,
+ instead of implementing a “fat interface”, can implement only those “role interfaces” whose methods are 
+ relevant to them.
+ 
+ public interface Athlete {
+    void compete();
+    void swim();
+    void highJump();
+    void longJump();
+}
+
+//JohnDoe is a swimmer
+public class JohnDoe implements Athlete {
+    @Override
+    public void compete() {
+        System.out.println("John Doe started competing");
+    }
+    @Override
+    public void swim() {
+        System.out.println("John Doe started swimming");
+    }
+    @Override
+    public void highJump() {
+    }
+    @Override
+    public void longJump() {
+    }
+}
+
+After ISP:
+
+public interface Athlete {
+    void compete();
+}
+public interface SwimmingAthlete extends Athlete {
+    void swim();
+}
+public interface JumpingAthlete extends Athlete {
+    void highJump();
+    void longJump();
+}
+
+And therefore John Doe will not have to implement actions that he is not capable of performing:
+
+public class JohnDoe implements SwimmingAthlete {
+    @Override
+    public void compete() {
+        System.out.println("John Doe started competing");
+    }
+    @Override
+    public void swim() {
+        System.out.println("John Doe started swimming");
+    }
+}
