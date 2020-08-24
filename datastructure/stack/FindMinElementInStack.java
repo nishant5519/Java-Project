@@ -3,6 +3,8 @@ package com.datastructure.stack;
 import java.util.Stack;
 
 public class FindMinElementInStack extends Stack<Integer> {
+
+	private static final long serialVersionUID = 1L;
 	// All operations are of O(1) and space complexity is O(n) because of use of
 	// auxiliary stack
 	Stack<Integer> min = new Stack<Integer>();
@@ -13,7 +15,7 @@ public class FindMinElementInStack extends Stack<Integer> {
 			super.push(x);
 		} else {
 			super.push(x);
-			if (x < min.peek())
+			if (x <= min.peek())
 				min.push(x);
 		}
 	}
@@ -51,30 +53,23 @@ public class FindMinElementInStack extends Stack<Integer> {
 
 }
 
-
-//All operations are of O(1) and space complexity is O(1) 
+// All operations are of O(1) and space complexity is O(1)
 class MyStack {
 	Stack<Integer> s;
 	Integer minEle;
 
-	// Constructor
 	MyStack() {
 		s = new Stack<Integer>();
 	}
 
-	// Prints minimum element of MyStack
 	void getMin() {
-		// Get the minimum number in the entire stack
 		if (s.isEmpty())
 			System.out.println("Stack is empty");
 
-		// variable minEle stores the minimum element
-		// in the stack.
 		else
 			System.out.println("Minimum Element in the " + " stack is: " + minEle);
 	}
 
-	// prints top element of MyStack
 	void peek() {
 		if (s.isEmpty()) {
 			System.out.println("Stack is empty ");
@@ -85,53 +80,45 @@ class MyStack {
 
 		System.out.print("Top Most Element is: ");
 
-		// If t < minEle means minEle stores
-		// value of t.
 		if (t < minEle)
 			System.out.println(minEle);
 		else
 			System.out.println(t);
 	}
 
-	// Removes the top element from MyStack
 	void pop() {
 		if (s.isEmpty()) {
 			System.out.println("Stack is empty");
 			return;
 		}
 
-		System.out.print("Top Most Element Removed: ");
-		Integer t = s.pop();
+		Integer topElement = s.pop();
 
 		// Minimum will change as the minimum element
 		// of the stack is being removed.
-		if (t < minEle) {
+		if (topElement < minEle) {
 			System.out.println(minEle);
-			minEle = 2 * minEle - t;
+			minEle = 2 * minEle - topElement;
 		}
 
 		else
-			System.out.println(t);
+			System.out.println(topElement);
 	}
 
-	// Insert new number into MyStack
-	void push(Integer x) {
+	void push(Integer curr) {
 		if (s.isEmpty()) {
-			minEle = x;
-			s.push(x);
-			System.out.println("Number Inserted: " + x);
-			return;
+			minEle = curr;
+			s.push(curr);
 		}
 
 		// If new number is less than original minEle
-		if (x < minEle) {
-			s.push(2 * x - minEle);
-			minEle = x;
+		if (curr < minEle) {
+			s.push(2 * curr - minEle);
+			minEle = curr;
 		}
 
 		else
-			s.push(x);
+			s.push(curr);
 
-		System.out.println("Number Inserted: " + x);
 	}
 }

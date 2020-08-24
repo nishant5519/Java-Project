@@ -6,35 +6,36 @@ public class LinkedListImplementation {
 		LinkedList linkedlist = new LinkedList();
 		linkedlist.insertFirst(40);
 		linkedlist.insertFirst(10);
-		/*linkedlist.insertFirst(3);
-		linkedlist.insertFirst(2);
-		linkedlist.insertFirst(1);
-		linkedlist.insertFirst(9);
-		linkedlist.insertFirst(8);
-		linkedlist.insertFirst(10);
-		linkedlist.insertFirst(11);
-		linkedlist.insertFirst(30);*/
+		/*
+		 * linkedlist.insertFirst(3); linkedlist.insertFirst(2);
+		 * linkedlist.insertFirst(1); linkedlist.insertFirst(9);
+		 * linkedlist.insertFirst(8); linkedlist.insertFirst(10);
+		 * linkedlist.insertFirst(11); linkedlist.insertFirst(30);
+		 */
 		System.out.println("LinkedlIst 1st::");
 		linkedlist.displayList();
 		LinkedList linkedlist2 = new LinkedList();
 		linkedlist2.insertFirst(30);
 		linkedlist2.insertFirst(20);
-	/*	linkedlist2.insertFirst(12);
-		linkedlist2.insertFirst(7);*/
+		/*
+		 * linkedlist2.insertFirst(12); linkedlist2.insertFirst(7);
+		 */
 		System.out.println("LinkedlIst 2nd::");
 		linkedlist2.displayList();
-		
-		linkedlist.mergeTwoLists(linkedlist.head,linkedlist2.head);
+
+		linkedlist.mergeTwoLists(linkedlist.head, linkedlist2.head);
 		System.out.println("Merged list");
-		
-//		linkedlist.swapNodes(2, 10);
+
+		// linkedlist.swapNodes(2, 10);
 		linkedlist.displayList();
 		System.out.println("Middle Element is :" + linkedlist.findMiddleElement().data);
-	//	System.out.println("Nth Element is :" + linkedlist.printNthFromLast(11).data);
-	//	System.out.println(linkedlist.reverse());
+		// System.out.println("Nth Element is :" +
+		// linkedlist.printNthFromLast(11).data);
+		// System.out.println(linkedlist.reverse());
 		linkedlist.reverseRecursive();
 		linkedlist.displayList();
-		//System.out.println("Element found is " + linkedlist.findRecursive(linkedlist.head,8).data);
+		// System.out.println("Element found is " +
+		// linkedlist.findRecursive(linkedlist.head,8).data);
 
 	}
 
@@ -51,7 +52,7 @@ class Node {
 }
 
 class LinkedList {
-	 Node head;
+	Node head;
 
 	public LinkedList() {
 		head = null;
@@ -88,27 +89,27 @@ class LinkedList {
 		Node current = head;
 		Node previous = head;
 		while (current.data != key) {
-			if (current.next == null) //did not find it
-				return null; 
+			if (current.next == null) // did not find it
+				return null;
 			else {
-				previous = current;  //go to next link
+				previous = current; // go to next link
 				current = current.next;
 			}
 		}
-		if (current == head)//If head node itself holds the key to be deleted
+		if (current == head)// If head node itself holds the key to be deleted
 			head = head.next;
 		else
 			previous.next = current.next;
 		return current;
 	}
-	
+
 	public Node find(int key) {
 		Node current = head;
 		while (current.data != key)
 			current = current.next;
 		return current;
 	}
-	
+
 	public Node findRecursive(Node current, int key) {
 
 		if (current == null)
@@ -120,7 +121,8 @@ class LinkedList {
 		 */
 		return findRecursive(current.next, key);
 	}
-	//swap nodes not data
+
+	// swap nodes not data
 	public void swapNodes(int d1, int d2) {
 		Node current1 = head;
 		Node previous1 = null;
@@ -159,42 +161,38 @@ class LinkedList {
 
 		return slowpointer;
 	}
-	
-	public Node printNthFromLast(int n){
-		Node firstreference=head;
-		Node secondreference=head;
-		for(int i = 1; i < n ; i++)
-			secondreference=secondreference.next;
-		while(secondreference.next!=null)
-		{
-			firstreference=firstreference.next;
-			secondreference=secondreference.next;
+
+	public Node printNthFromLast(int n) {
+		Node firstreference = head;
+		Node secondreference = head;
+		for (int i = 1; i < n; i++)
+			secondreference = secondreference.next;
+		while (secondreference.next != null) {
+			firstreference = firstreference.next;
+			secondreference = secondreference.next;
 		}
 		return firstreference;
 	}
-	
-	//Important: Comple"
-	public Node reverse() {		
-		Node before=null;
-		Node current=head;
-		Node after=null;
+
+	public Node reverse() {
+		Node before = null;
+		Node current = head;
+		Node after = null;
 		while (current != null) {
 			after = current.next;
-            current.next = before;
-            before = current;
-            current = after;
-        }
+			current.next = before;
+			before = current;
+			current = after;
+		}
 		head = before;
-        return head;
+		return head;
 	}
-	
+
 	public void reverseRecursive() {
-		Node current=head;
+		Node current = head;
 		reverseUtil(current);
 	}
 
-	
-	
 	public void reverseUtil(Node current) {
 
 		if (current.next == null) {
@@ -206,7 +204,33 @@ class LinkedList {
 		p.next = current;
 		current.next = null;
 	}
-	
+
+	public Node reverseList(Node current) {
+
+		if (current == null || current.next == null)
+			return current;
+
+		else {
+
+			Node nextNode = current.next;
+			current.next = null;
+			Node reverseListHead = reverseList(nextNode);
+			nextNode.next = current;
+			return reverseListHead;
+
+		}
+
+	}
+
+	public void printreverseList(Node current) {
+
+		if (current == null)
+			return;
+
+		printreverseList(current.next);
+		System.out.print(current.data + " ");
+	}
+
 	public boolean detectLoop() {
 		Node slowrefer = head;
 		Node fastrefer = head;
@@ -233,7 +257,7 @@ class LinkedList {
 					l2 = l2.next;
 				}
 				p = p.next;
-			//	p.next=null;
+				// p.next=null;
 			} else if (l1 == null) {
 				p.next = l2;
 				break;
@@ -242,7 +266,7 @@ class LinkedList {
 				break;
 			}
 		}
-			
+
 		return firstNode.next;
 	}
 }

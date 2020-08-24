@@ -1,6 +1,10 @@
 package com.datastructure.dynamicprogramming;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Fibonacci {
+	final Map<Integer, Integer> cache = new HashMap<Integer, Integer>();
 	final int MAX = 100;
 	final int NIL = -1;
 	int lookup[] = new int[MAX];
@@ -41,8 +45,24 @@ public class Fibonacci {
 			return n;
 		return recursiveFib(n - 1) + recursiveFib(n - 2);
 	}
-
+	
+	
+	private int fib(int N) {
+	    if (cache.containsKey(N)) {
+	      return cache.get(N);
+	    }
+	    int result;
+	    if (N < 2) {
+	      result = N;
+	    } else {
+	      result = fib(N-1) + fib(N-2);
+	    }
+	    // keep the result in cache.
+	    cache.put(N, result);
+	    return result;
+	  }
 	public static void main(String[] args) {
+		
 		Fibonacci f = new Fibonacci();
 		int n = 3;
 		f._initialize();
