@@ -19,7 +19,6 @@ public class BreakSingletonUsingReflection {
 				instance2 = (SingletonClass) constructor.newInstance();
 			} catch (InstantiationException | IllegalAccessException
 					| IllegalArgumentException | InvocationTargetException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			break;

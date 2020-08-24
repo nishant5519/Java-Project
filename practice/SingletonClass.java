@@ -6,7 +6,7 @@ import com.cloning.SuperClass;
 
 public class SingletonClass extends SuperClass implements Serializable {
 	/**
-	 * 
+	 * http://thecodersbreakfast.net/index.php?post/2011/05/12/Serialization-and-magic-methods
 	 */
 	private static final long serialVersionUID = 1L;
 	
@@ -14,9 +14,8 @@ public class SingletonClass extends SuperClass implements Serializable {
 
 	private SingletonClass() {
 		/*
-		 * if(singletonObj!=null)//changes to avoid creation of object using
-		 * reflection throw new
-		 * RuntimeException("Create Object using getInstance() method only");
+		 * if(singletonObj!=null)//changes to avoid creation of object using reflection
+		 * throw new RuntimeException("Create Object using getInstance() method only");
 		 */
 	}
 
@@ -31,9 +30,13 @@ public class SingletonClass extends SuperClass implements Serializable {
 		return singletonObj;
 	}
 
-	// implement readResolve method
+	// implement readResolve method.Called while Deserialization
 	protected Object readResolve() {
 		return singletonObj;
+	}
+	private Object writeReplace(){
+		System.out.println("writeReplace");
+        return this;		
 	}
 
 	@Override

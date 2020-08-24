@@ -7,8 +7,8 @@ public class ReadInput {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in); 
+		int myInt = scanner.nextInt();	
 		String myString = scanner.next();
-		int myInt = scanner.nextInt();		
 		System.out.println("myString is: " + myString);
 		System.out.println("myInt is: " + myInt);
 		int[] input=new int[myInt];
@@ -18,7 +18,6 @@ public class ReadInput {
 		for(int i=0;i<myInt;i++){
 			System.out.println(input[i]);
 		}
-		File file=new File("Nishant");
 	}
 
 }
