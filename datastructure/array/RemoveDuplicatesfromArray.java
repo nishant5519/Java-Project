@@ -5,7 +5,7 @@ public class RemoveDuplicatesfromArray {
 	public static void main(String[] args) {
 		int[] array = { 1, 2, 2, 3, 4, 4, 4, 5, 5 };
 
-		// naiveMethodForDuplicateRemovalFromAnyArray(array);
+		 naiveMethodForDuplicateRemovalFromAnyArray(array);
 		int n = removeDuplicatesFromSortedArrayOnlyUsingConstantSpace(array,
 				array.length);
 		for (int i = 0; i < n; i++)

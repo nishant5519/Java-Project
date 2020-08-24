@@ -10,29 +10,32 @@ public class PrintMatrixSpirally {
 	static void printSpirally(int arr[][]) throws InterruptedException {
 		// there must be comma between two elements.
 		// after printing all elements, print a newline char as well.
-		int endRow = arr.length;
-		int endCol = arr[0].length;
-		int startRow = 0;
-		int startCol = 0;
+		int top = 0;
+		int bottom = arr.length; //row
+		
+		int left = 0;
+		int right = arr[0].length; //col
+		
+		
 
-		while (startRow < endRow && startCol < endCol) {
-			for (int i = startCol; i < endCol; i++)
-				System.out.print(arr[startRow][i] + " ,");
-			startRow++;
+		while (top < bottom && left < right) {
+			for (int i = left; i < right; i++)
+				System.out.print(arr[top][i] + " ,");
+			top++;
 
-			for (int j = startRow; j < endRow; j++)
-				System.out.print(arr[j][endCol - 1] + " ,");
-			endCol--;
+			for (int j = top; j < bottom; j++)
+				System.out.print(arr[j][right - 1] + " ,");
+			right--;
 
-			if (startRow < endRow) {
-				for (int i = endCol - 1; i >= startCol; i--)
-					System.out.print(arr[endRow - 1][i] + " ,");
-				endRow--;
+			if (top < bottom) {
+				for (int i = right - 1; i >= left; i--)
+					System.out.print(arr[bottom - 1][i] + " ,");
+				bottom--;
 			}
-			if (startCol < endCol) {
-				for (int i = endRow - 1; i >= startRow; i--)
-					System.out.print(arr[i][startCol] + " ,");
-				startCol++;
+			if (left < right) {
+				for (int i = bottom - 1; i >= top; i--)
+					System.out.print(arr[i][left] + " ,");
+				left++;
 			}
 		}
 
