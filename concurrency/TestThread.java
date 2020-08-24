@@ -21,7 +21,13 @@ public class TestThread {
 
 			@Override
 			public void run() {
+				try {
 				increment();
+				int a=2/0;
+				}
+				catch(Exception e){
+					System.out.println("Checking if try catch can be used inside run method or not");
+				}
 				System.out.println("Running Thread in Job2 "
 						+ "and thread name is " + Thread.currentThread()
 						+ "and Value of x is " + x);

@@ -33,7 +33,6 @@ public class ReentrantLockDemo {
 			t1.join();
 			t2.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -45,8 +44,9 @@ public class ReentrantLockDemo {
 class Runner {
 
 	private int count = 0;
-	private Lock lock = new ReentrantLock();
+	private ReentrantLock lock = new ReentrantLock();
 	private Condition cond = lock.newCondition();
+	
 
 	private void increment() {
 		for (int i = 0; i < 10000000; i++) {
@@ -57,7 +57,7 @@ class Runner {
 	public void firstThread() throws InterruptedException {
 		lock.lock();
 		System.out.println("Waiting ....");
-		cond.await(); //similar as Wait method of Object class
+		cond.await(); //similar as Wait method of Object class.Call await only after taking lock similar to Synchronized and wait method relation
 		System.out.println("Woken up!");
 		try {
 			increment();

@@ -21,6 +21,7 @@ public class FutureCallableExample {
 				Random random = new Random();
 				int duration = random.nextInt(4000);
 				if (duration > 2000) {
+					System.out.println("Too long duration::" + duration);
 					throw new TimeoutException("Sleeping for too long.");
 				}
 
@@ -38,6 +39,8 @@ public class FutureCallableExample {
 		// executor.awaitTermination(1, TimeUnit.DAYS);
 		try {
 			// get returned value from call()
+			if(!future.isDone())
+				System.out.println("waiting for the result");
 			System.out.println("Result is: " + future.get());
 
 		} catch (InterruptedException ignored) {

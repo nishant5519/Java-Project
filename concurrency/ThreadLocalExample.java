@@ -40,3 +40,8 @@ public class ThreadLocalExample implements Runnable {
 	}
 
 }
+
+
+class abc extends Thread {
+	
+}
