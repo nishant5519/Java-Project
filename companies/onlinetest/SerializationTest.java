@@ -1,4 +1,4 @@
-package com.companies.onlinetest;
+package companies.onlinetest;
 
 import java.io.File;
 import java.io.FileOutputStream;

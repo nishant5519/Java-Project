@@ -1,4 +1,4 @@
-package com.datastructure.backtracking;
+package backtracking;
 
 /* Time complexity O(n*n)
 * Space complexity O(n*n)

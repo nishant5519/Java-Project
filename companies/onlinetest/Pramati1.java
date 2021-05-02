@@ -1,4 +1,4 @@
-package com.companies.onlinetest;
+package companies.onlinetest;
 
 
 public final class Pramati1 {

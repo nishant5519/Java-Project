@@ -1,4 +1,4 @@
-package com.constructor;
+package constructor;
 
 public class TestConstructor {
 	int i = 0;

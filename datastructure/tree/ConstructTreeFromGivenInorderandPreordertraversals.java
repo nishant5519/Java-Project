@@ -1,4 +1,4 @@
-package com.datastructure.tree;
+package tree;
 
 public class ConstructTreeFromGivenInorderandPreordertraversals {
 

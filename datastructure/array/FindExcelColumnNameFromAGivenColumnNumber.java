@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 //https://www.geeksforgeeks.org/find-excel-column-name-given-number/ 
 public class FindExcelColumnNameFromAGivenColumnNumber {

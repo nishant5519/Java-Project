@@ -1,4 +1,4 @@
-package com.datastructure.backtracking;
+package backtracking;
 
 /* Java program to solve N Queen Problem using
  backtracking */

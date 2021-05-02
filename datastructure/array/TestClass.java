@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 /* IMPORTANT: Multiple classes and nested static classes are supported */
 import java.util.*;

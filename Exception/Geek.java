@@ -1,4 +1,4 @@
-package com.Exception;
+package Exception;
 
 //A Java program to demonstrate finally.
 class Geek

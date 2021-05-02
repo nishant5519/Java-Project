@@ -1,4 +1,4 @@
-package com.ObjectOrientedPrinciples;
+package ObjectOrientedPrinciples;
 
 public class MainMethodTest {
 	public static void main(String[] args) {

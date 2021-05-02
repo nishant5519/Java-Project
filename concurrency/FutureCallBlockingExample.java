@@ -1,4 +1,4 @@
-package com.concurrency.completionservice;
+package concurrency;
 
 import java.util.ArrayList;
 import java.util.List;

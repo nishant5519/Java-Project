@@ -1,4 +1,4 @@
-package com.Generics;
+package Generics;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,7 +21,7 @@ public class TestGenerics {
 		List<Cow> cows = new ArrayList<Cow>();
 		cows.add(new Cow());
 		cows.add(new Cow());
-		AnimalDoctor doctor = new AnimalDoctor();
+		Animal_Doctor doctor = new Animal_Doctor();
 		doctor.checkAnimals(list);
 		doctor.checkAnimals(dogs);
 		doctor.checkAnimals(cows);

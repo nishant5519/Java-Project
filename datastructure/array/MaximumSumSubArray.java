@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ public class MaximumSumSubArray {
 		System.out.println("Maximum contiguous sum is " + maxSubArraySumforList(Arrays.asList(-1, 3, 4, -2, 5, -7)));
 	}
 
-	// Time Complexity: O(n)
+	// Time Complexity: O(n) Kadane algorithm
 	static int maxSubArraySum(int a[]) {
 		int size = a.length;
 		int max_so_far = Integer.MIN_VALUE, consecutiveSum = 0, start = 0, end = 0, s = 0;
@@ -37,14 +37,21 @@ public class MaximumSumSubArray {
 	static int maxSubArraySumforList(List<Integer> a) {
 		int size = a.size();
 		int max_so_far = Integer.MIN_VALUE, consecutiveSum = 0;
+		int start = 0;
+		int end = 0;
+		int index = 0;
 
 		for (int i = 0; i < size; i++) {
 			consecutiveSum = consecutiveSum + a.get(i);
 			if (max_so_far < consecutiveSum) {
 				max_so_far = consecutiveSum;
+				start = index;
+				end = i;
+				
 			}
 			if (consecutiveSum < 0) {
 				consecutiveSum = 0;
+				index = i + 1; 
 			}
 		}
 		return max_so_far;

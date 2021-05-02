@@ -1,4 +1,4 @@
-package com.practice;
+package practice;
 /*package com.exercise;
 
 import java.io.BufferedReader;

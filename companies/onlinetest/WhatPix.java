@@ -1,11 +1,11 @@
-package com.companies.onlinetest;
+package companies.onlinetest;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.serialization.Employee;
+import serialization.Employee;
 
 public class WhatPix {
 

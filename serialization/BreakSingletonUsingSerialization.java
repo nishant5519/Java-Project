@@ -1,4 +1,4 @@
-package com.serialization;
+package serialization;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
-import com.practice.SingletonClass;
+import practice.SingletonClass;
 
 //Overcome serialization issue:- To overcome this issue, we have to implement method readResolve() method.
 public class BreakSingletonUsingSerialization {

@@ -1,4 +1,4 @@
-package com.datastructure.recursion;
+package recursion;
 
 public class SumofDigits {
 

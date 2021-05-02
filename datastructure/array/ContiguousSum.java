@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 //does not find starting and end index.
 public class ContiguousSum {
 

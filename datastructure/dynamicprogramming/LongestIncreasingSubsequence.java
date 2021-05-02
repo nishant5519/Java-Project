@@ -1,4 +1,4 @@
-package com.datastructure.dynamicprogramming;
+package dynamicprogramming;
 
 public class LongestIncreasingSubsequence {
 	public int longestSubsequenceWithActualSolution(int arr[]) {

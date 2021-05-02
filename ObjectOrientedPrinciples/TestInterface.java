@@ -1,4 +1,4 @@
-package com.ObjectOrientedPrinciples;
+package ObjectOrientedPrinciples;
 
 
 //A Java program to demonstrate that both super class

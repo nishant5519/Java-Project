@@ -1,4 +1,4 @@
-package com.headfirst.softwaredesign.chapter1.initialsearchapplication;
+package headfirst.softwaredesign.chapter1.initialsearchapplication;
 
 import java.util.Iterator;
 import java.util.LinkedList;

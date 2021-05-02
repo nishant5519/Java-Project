@@ -1,4 +1,7 @@
-package com.datastructure.string;
+package string;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SwapString {
 
@@ -20,6 +23,11 @@ public class SwapString {
 		swapintegers(int1, int2);
 		System.out.println(int1);
 		System.out.println(int2);
+		
+		Map map = new HashMap();
+		map.put("APPIA-1", "appia");
+		int i=0;
+		System.out.println(map.get("APPIA-"+i+1));
 
 	}
 

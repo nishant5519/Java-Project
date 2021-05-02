@@ -1,4 +1,4 @@
-package com.Exception;
+package Exception;
 
 public class AritmaticExceptionTest {
 
@@ -12,9 +12,9 @@ public class AritmaticExceptionTest {
 			for (i = -1; i < 3; ++i)
 				sum = (sum / i);
 		} catch (ArithmeticException e) {
-			System.out.print("0");
+			System.out.println("0");
 		}
-		System.out.print(sum);
+		System.out.println(sum);
 	}
 
 }

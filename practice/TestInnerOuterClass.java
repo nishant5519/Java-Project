@@ -1,4 +1,4 @@
-package com.practice;
+package practice;
 
 public class TestInnerOuterClass {
 	// How to create instance of static and non static nested class?

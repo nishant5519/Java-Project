@@ -1,4 +1,4 @@
-package com.practice;
+package practice;
 
 public class WithoutMainMethod {
 	 static int a;

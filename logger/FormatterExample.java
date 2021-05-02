@@ -1,4 +1,4 @@
-package com.logger;
+package logger;
 
 import java.io.IOException;
 import java.util.logging.Formatter;

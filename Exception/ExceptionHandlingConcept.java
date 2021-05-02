@@ -1,4 +1,4 @@
-package com.Exception;
+package Exception;
 
 public class ExceptionHandlingConcept {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.practice;
+package practice;
 
 class X {
 	static int a = 1234;

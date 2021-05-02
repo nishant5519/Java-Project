@@ -1,4 +1,4 @@
-package com.datastructure.balancedTree;
+package balancedTree;
 
 import java.util.Deque;
 import java.util.LinkedList;

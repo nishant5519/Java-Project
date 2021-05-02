@@ -1,4 +1,4 @@
-package com.datastructure.recursion;
+package recursion;
 
 /*Given a positive integer N, representing number of people in the room. Person 1 has 10 FINGERS. 
 Person 2 has 11 FINGERS.Person 3 has 10, Person 4 has 11 fingers and this pattern goes on.

@@ -1,4 +1,4 @@
-package com.Generics;
+package Generics;
 
 class Foo<X> {
 	Foo(X x) {

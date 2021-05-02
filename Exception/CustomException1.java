@@ -1,4 +1,4 @@
-package com.Exception;
+package Exception;
 
 public class CustomException1 {
 

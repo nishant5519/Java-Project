@@ -1,4 +1,4 @@
-package com.datastructure.tree;
+package tree;
 public class TreeNode {
 	int data;
 	TreeNode left, right;

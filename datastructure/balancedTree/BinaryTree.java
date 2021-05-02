@@ -1,4 +1,4 @@
-package com.datastructure.balancedTree;
+package balancedTree;
 class NodeRef{
     Node node;
 }

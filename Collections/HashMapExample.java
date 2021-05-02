@@ -1,10 +1,10 @@
-package com.Collections;
+package Collections;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import com.serialization.Employee;
+import serialization.Employee;
 
 public class HashMapExample {
 	public static void main(String[] args) {

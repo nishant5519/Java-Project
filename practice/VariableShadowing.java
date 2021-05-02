@@ -1,8 +1,8 @@
-package com.practice;
+package practice;
 
 /*Shadowing refers to the practice in Java programming of using two variables with the same name 
 within scopes that overlap. When you do that, the variable with the higher-level scope is hidden because 
-the variable with lower-level scope overrides it. The higher-level variable is then “shadowed.” */
+the variable with lower-level scope overrides it. The higher-level variable is then ï¿½shadowed.ï¿½ */
 public class VariableShadowing {
 	static int x;
 

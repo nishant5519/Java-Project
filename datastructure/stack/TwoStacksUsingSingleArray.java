@@ -1,4 +1,4 @@
-package com.datastructure.stack;
+package stack;
 
 public class TwoStacksUsingSingleArray {
 

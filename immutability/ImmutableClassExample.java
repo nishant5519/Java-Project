@@ -1,4 +1,4 @@
-package com.immutability;
+package immutability;
 
 import java.util.HashMap;
 import java.util.Iterator;

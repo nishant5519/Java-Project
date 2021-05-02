@@ -1,9 +1,9 @@
-package com.companies.onlinetest;
+package companies.onlinetest;
 
 public class Goldmansachs {
 
 	public static void main(String[] args) {
-		int n = nonRepeatingDigitProductCount(2, 10, 13);
+		int n = nonRepeatingDigitProductCount(1, 0, 99);
 		System.out.println(n);
 	}
 
@@ -21,9 +21,9 @@ public class Goldmansachs {
 		return count;
 
 	}
-
+	// check the answer for x =1 and range from 0 to 99 -->
 	static boolean checkProductContainsNumber(int product, int y) {
-		while (y != 0) {
+		while (y >= 0) {
 			int lastdigit = y % 10;
 			String strY = String.valueOf(lastdigit);
 			String strProduct = String.valueOf(product);
@@ -45,7 +45,7 @@ public class Goldmansachs {
 		return null;
 	}
 
-	// Returns true if there is a subset of set[] with sun equal to given sum
+	// Returns true if there is a subset of set[] with sum equal to given sum
 	static boolean isSubsetSum(int set[], int n, int sum) {
 		// The value of subset[i][j] will be true if there
 		// is a subset of set[0..j-1] with sum equal to i

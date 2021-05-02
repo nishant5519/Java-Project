@@ -1,4 +1,4 @@
-package com.Generics;
+package Generics;
 
 class Main {
 	// A Generic method example

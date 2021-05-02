@@ -1,4 +1,4 @@
-package com.headfirst.softwaredesign.chapter1.searchtoolfinal;
+package headfirst.softwaredesign.chapter1.searchtoolfinal;
 
 public class Guitar {
 

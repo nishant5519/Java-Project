@@ -1,4 +1,4 @@
-package com.datastructure.sorting;
+package sorting;
 /* Java program for Merge Sort */
 class MergeSort 
 { 

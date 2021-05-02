@@ -1,4 +1,4 @@
-package com.datastructure.binarytree;
+package binarytree;
 /*package com.datastructure.balancedTree;
 
 *//**

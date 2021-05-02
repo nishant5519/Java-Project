@@ -1,4 +1,4 @@
-package com.onlinetest;
+package onlinetest;
 
 /*Number Operations
 Programming challenge description:

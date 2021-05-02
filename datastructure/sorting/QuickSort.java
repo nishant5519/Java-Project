@@ -1,4 +1,4 @@
-package com.datastructure.sorting;
+package sorting;
 
 /*Although the worst case time complexity of QuickSort is O(n2) 
  * which is more than many other sorting algorithms like Merge Sort and Heap Sort, QuickSort is 

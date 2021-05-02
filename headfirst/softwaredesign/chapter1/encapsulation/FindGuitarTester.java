@@ -1,4 +1,4 @@
-package com.headfirst.softwaredesign.chapter1.encapsulation;
+package headfirst.softwaredesign.chapter1.encapsulation;
 
 import java.util.Iterator;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.datastructure.dynamicprogramming;
+package dynamicprogramming;
 
 import java.util.Arrays;
 

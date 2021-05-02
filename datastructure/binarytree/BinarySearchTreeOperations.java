@@ -1,4 +1,4 @@
-package com.datastructure.binarytree;
+package binarytree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -128,7 +128,7 @@ class BinarySearchTree {
 				else
 					current = current.right; // or go right?
 				if (current == null) // if no child,
-					return null; // didn’t find it
+					return null; // didnï¿½t find it
 			}
 			return current; // found it
 		}
@@ -168,7 +168,7 @@ class BinarySearchTree {
 					current = current.right; // or go right?
 				}
 				if (current == null) // if no child,
-					return false; // didn’t find it
+					return false; // didnï¿½t find it
 			}
 
 			if (current.left == null && current.right == null) {

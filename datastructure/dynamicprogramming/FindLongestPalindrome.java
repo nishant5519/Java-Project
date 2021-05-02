@@ -1,4 +1,4 @@
-package com.datastructure.dynamicprogramming;
+package dynamicprogramming;
 
 //Longest Palindrome Substring
 //Time complexity: O ( n^2 ) where n is the length of input string.

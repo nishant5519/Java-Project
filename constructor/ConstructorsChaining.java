@@ -1,4 +1,4 @@
-package com.constructor;
+package constructor;
 
 public class ConstructorsChaining {
 	public static void main(String[] args) {

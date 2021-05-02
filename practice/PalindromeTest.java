@@ -1,4 +1,4 @@
-package com.practice;
+package practice;
 
 public class PalindromeTest {	
 	public static void main(String[] args) {

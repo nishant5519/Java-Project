@@ -1,4 +1,4 @@
-package com.Exception;
+package Exception;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class LoopAndException {
 				System.out.println(str);
 				throw new Exception("Exception for string " + str);
 			} catch (Exception ex) {
-				System.out.println("Caught exception");
+				System.out.println("Caught exception : " + ex.getMessage());
 			}
 		}
 	}

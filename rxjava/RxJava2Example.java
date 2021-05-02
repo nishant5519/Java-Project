@@ -1,4 +1,4 @@
-package com.rxjava;
+package rxjava;
 
 import java.util.Observable;
 import java.util.function.Consumer;

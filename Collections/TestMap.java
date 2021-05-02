@@ -1,4 +1,4 @@
-package com.Collections;
+package Collections;
 
 import java.math.BigDecimal;
 import java.util.Date;

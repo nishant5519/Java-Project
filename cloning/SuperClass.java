@@ -1,4 +1,4 @@
-package com.cloning;
+package cloning;
 
 public class SuperClass implements Cloneable {
 	int i = 10;

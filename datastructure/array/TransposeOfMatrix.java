@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 //http://javabypatel.blogspot.in/2016/11/rotate-matrix-by-90-degrees-inplace.html
 //Given N*N matrix, inplace-rotate it by 90 degree clockwise to its transpose. Remember Transpose and rotate by 90 degree is two 
 //different things.

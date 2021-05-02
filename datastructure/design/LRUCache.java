@@ -1,4 +1,4 @@
-package com.datastructure.design;
+package design;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.datastructure.sorting;
+package sorting;
 
 public class SelectionSort {
 

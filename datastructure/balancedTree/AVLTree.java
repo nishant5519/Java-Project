@@ -1,4 +1,4 @@
-package com.datastructure.balancedTree;
+package balancedTree;
 
 
 /** AVL tree is self balancing binary tree. Difference of height of left or right subtree

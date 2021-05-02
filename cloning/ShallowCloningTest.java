@@ -1,4 +1,4 @@
-package com.cloning;
+package cloning;
 
 public class ShallowCloningTest {
 

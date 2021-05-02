@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 //Only valid when larger element appear after smaller element.
 public class MaxDiffBetweenTwoElementsSuchThatLargerElementAppearsAfterTheSmallerNumber {	
 	public static void main(String[] args) {

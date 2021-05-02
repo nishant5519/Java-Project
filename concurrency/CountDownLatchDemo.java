@@ -1,4 +1,4 @@
-package com.concurrency.countdownlatch;
+package concurrency;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -10,7 +10,7 @@ public class CountDownLatchDemo {
 		new MyThread(cdl);
 		try {
 			cdl.await();// this causes execution of the main thread to pause
-						// until cdl’s count has been decremented five times
+						// until cdlï¿½s count has been decremented five times
 		} catch (InterruptedException exc) {
 			System.out.println(exc);
 		}

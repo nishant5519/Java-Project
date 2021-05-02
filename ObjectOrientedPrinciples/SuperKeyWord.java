@@ -1,4 +1,4 @@
-package com.ObjectOrientedPrinciples;
+package ObjectOrientedPrinciples;
 
 /* Base class vehicle */
 class BeastVehicle {

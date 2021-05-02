@@ -1,4 +1,4 @@
-package com.datastructure.queue;
+package queue;
 
 public class QueueUsingLinkedList {
 

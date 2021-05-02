@@ -1,4 +1,4 @@
-package com.concurrency.exchanger;
+package concurrency;
 
 import java.util.concurrent.Exchanger;
 

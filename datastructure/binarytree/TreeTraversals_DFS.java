@@ -1,4 +1,4 @@
-package com.datastructure.binarytree;
+package binarytree;
 
 import java.util.Deque;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.concurrency;
+package concurrency;
 
 //Sharing Variables without Synchronization.Don't Do this.
 public class NoVisibility {

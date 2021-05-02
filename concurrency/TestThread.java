@@ -1,4 +1,4 @@
-package com.concurrency;
+package concurrency;
 
 public class TestThread {
 	static int x = 10;

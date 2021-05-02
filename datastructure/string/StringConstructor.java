@@ -1,4 +1,4 @@
-package com.datastructure.string;
+package string;
 
 public class StringConstructor {
 

@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 /*
  * A Simple Solution is to run two nested loops. The outer loop picks all elements one by one and inner loop counts

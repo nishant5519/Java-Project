@@ -1,4 +1,4 @@
-package com.companies.onlinetest;
+package companies.onlinetest;
 
 public class Main {
 	public static void main(String[] args) {

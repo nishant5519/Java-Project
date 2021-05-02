@@ -1,4 +1,4 @@
-package com.ObjectOrientedPrinciples;
+package ObjectOrientedPrinciples;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

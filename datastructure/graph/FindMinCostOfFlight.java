@@ -1,4 +1,4 @@
-package com.datastructure.graph;
+package graph;
 
 import java.util.ArrayList;
 import java.util.Comparator;

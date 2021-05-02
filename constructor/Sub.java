@@ -1,4 +1,4 @@
-package com.constructor;
+package constructor;
 
 public class Sub extends Super {
 	//If Superclass does not have a no-arg constructor ,then in your subclass you cannot use default constructor supplied by compiler.

@@ -1,4 +1,4 @@
-package com.miscellaneous;
+package miscellaneous;
 
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;

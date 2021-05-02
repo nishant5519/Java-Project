@@ -1,4 +1,4 @@
-package com.datastructure.binarytree;
+package binarytree;
 
 import java.util.LinkedList;
 import java.util.Queue;

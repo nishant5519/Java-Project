@@ -1,4 +1,5 @@
-package com.practice;
+package practice;
+
 
 public class SingletonDemo {
 	static SingletonClass obj1 = null;

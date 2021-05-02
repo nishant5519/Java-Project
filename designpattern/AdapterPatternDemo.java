@@ -1,4 +1,4 @@
-package com.designpattern;
+package designpattern;
 
 interface MediaPlayer {
 	public void play(String audioType, String fileName);

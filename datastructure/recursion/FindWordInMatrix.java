@@ -1,4 +1,4 @@
-package com.datastructure.recursion;
+package recursion;
 
 public class FindWordInMatrix {
 	public static void main(String[] args) {

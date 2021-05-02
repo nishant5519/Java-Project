@@ -1,4 +1,4 @@
-package com.companies.onlinetest;
+package companies.onlinetest;
 
 import java.util.Comparator;
 import java.util.HashMap;

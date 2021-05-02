@@ -1,4 +1,4 @@
-package com.oracle;
+package oracle;
 
 public interface Iterator<E> {
 	/**

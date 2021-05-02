@@ -1,4 +1,4 @@
-package com.ObjectOrientedPrinciples;
+package ObjectOrientedPrinciples;
 
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;

@@ -1,6 +1,6 @@
-package com.cloning;
+package cloning;
 
-import com.practice.SingletonClass;
+import practice.SingletonClass;
 
 public class BreakSingletonUsingCloning {
 

@@ -1,4 +1,4 @@
-package com.cloning;
+package cloning;
 
 public class DeepCloningTest {
 	public static void main(String[] args) throws CloneNotSupportedException {

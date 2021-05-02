@@ -1,4 +1,4 @@
-package com.headfirst.softwaredesign.chapter1.multipleguitarresults;
+package headfirst.softwaredesign.chapter1.multipleguitarresults;
 
 import java.util.Iterator;
 import java.util.LinkedList;

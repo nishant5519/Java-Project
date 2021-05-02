@@ -1,4 +1,4 @@
-package com.constructor;
+package constructor;
 
 import java.util.Date;
 

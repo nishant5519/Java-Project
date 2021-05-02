@@ -1,4 +1,4 @@
-package com.concurrency.Semaphore;
+package concurrency;
 
 import java.util.concurrent.*;
 

@@ -1,4 +1,4 @@
-package com.miscellaneous;
+package miscellaneous;
 
 import java.lang.ref.SoftReference;
 
@@ -21,7 +21,7 @@ public class TypeOfReference {
 		sb1 = null;
 		
 /*A WEAK reference can be created in a similar manner using WeakReference class. When sb 
-is set to null and the StringBuilder object only has a weak reference, the JVM’s garbage 
+is set to null and the StringBuilder object only has a weak reference, the JVMï¿½s garbage 
 collector will have absolutely no compromise and immediately collect the object at the 
 very next cycle.
 

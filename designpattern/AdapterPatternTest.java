@@ -1,4 +1,4 @@
-package com.designpattern;
+package designpattern;
 
 class Volt {
 	private int volts;

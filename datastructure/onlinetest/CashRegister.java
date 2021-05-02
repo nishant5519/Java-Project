@@ -1,4 +1,4 @@
-package com.onlinetest;
+package onlinetest;
 
 import java.io.BufferedReader;
 import java.io.IOException;

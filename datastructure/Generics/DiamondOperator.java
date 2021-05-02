@@ -1,4 +1,4 @@
-package com.Generics;
+package Generics;
 
 public class DiamondOperator<T> {
 	 public DiamondOperator(T t) { }

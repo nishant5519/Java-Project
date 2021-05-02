@@ -1,4 +1,4 @@
-package com.concurrency;
+package concurrency;
 
 import java.util.Scanner;
 import java.util.concurrent.locks.Condition;

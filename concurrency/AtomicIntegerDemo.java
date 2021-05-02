@@ -1,4 +1,4 @@
-package com.concurrency;
+package concurrency;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -10,15 +10,15 @@ public class AtomicIntegerDemo {
 	}
 }
 
-class SharedResources {
+class SharedResources1 {
 	static AtomicInteger ai = new AtomicInteger(0);
 }
 
 // A thread of execution that increments count.
-class AtomThread implements Runnable {
+class AtomThread1 implements Runnable {
 	String name;
 
-	AtomThread(String n) {
+	AtomThread1(String n) {
 		name = n;
 		new Thread(this).start();
 	}
@@ -26,7 +26,7 @@ class AtomThread implements Runnable {
 	public void run() {
 		System.out.println("Starting " + name);
 		for (int i = 1; i <= 3; i++)
-			System.out.println(name + " got: " + SharedResources.ai.getAndSet(i));
+			System.out.println(name + " got: " + SharedResources1.ai.getAndSet(i));
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.practice;
+package practice;
 
 public class ByteTest {
 
@@ -11,6 +11,10 @@ public class ByteTest {
 		
 		byte x=50;
 		x=(byte) (x*50);//Need conversion from int to byte
+		
+		int p =1;
+		int q =1;
+		System.out.println(p&q);
 	}
 
 }

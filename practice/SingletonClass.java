@@ -1,8 +1,8 @@
-package com.practice;
+package practice;
 
 import java.io.Serializable;
 
-import com.cloning.SuperClass;
+import cloning.SuperClass;
 
 public class SingletonClass extends SuperClass implements Serializable {
 	/**

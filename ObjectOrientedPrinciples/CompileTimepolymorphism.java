@@ -1,4 +1,4 @@
-package com.ObjectOrientedPrinciples;
+package ObjectOrientedPrinciples;
 
 public class CompileTimepolymorphism {
 	void sum(int a, int b) {

@@ -1,4 +1,4 @@
-package com.headfirst.softwaredesign.chapter1.encapsulation;
+package headfirst.softwaredesign.chapter1.encapsulation;
 
 public class Guitar {
 

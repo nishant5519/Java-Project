@@ -1,4 +1,4 @@
-package com.datastructure.searching;
+package searching;
 
 public class SearchAnElementInASortedAndRotatedArray {
 

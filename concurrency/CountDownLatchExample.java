@@ -1,4 +1,4 @@
-package com.concurrency.countdownlatch;
+package concurrency;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -15,7 +15,7 @@ public class CountDownLatchExample {
         executor.shutdown();
 
         try {
-            // Application’s main thread waits, till other service threads which are
+            // Applicationï¿½s main thread waits, till other service threads which are
             // as an example responsible for starting framework services have completed started all services.
             latch.await();
         } catch (InterruptedException e) {

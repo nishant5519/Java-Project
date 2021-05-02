@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 public class PositiveNegativeMaintainingOrder {
 //Time complexity of above solution is O(n*n) and auxiliary space is O(1)

@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 public class Segregate0sAnd1sInAnArray {
 	public static void main(String[] args) {

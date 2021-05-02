@@ -1,4 +1,4 @@
-package com.onlinetest;
+package onlinetest;
 
 import java.util.Arrays;
 /*

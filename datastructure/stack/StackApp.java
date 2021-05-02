@@ -1,4 +1,4 @@
-package com.datastructure.stack;
+package stack;
 
 public class StackApp {
 
@@ -10,12 +10,12 @@ public class StackApp {
 		theStack.push(60);
 		theStack.push(80);
 		/*
-		 * while (!theStack.isEmpty()) // until it’s empty, { // delete item
+		 * while (!theStack.isEmpty()) // until itï¿½s empty, { // delete item
 		 * from stack int value = theStack.peek(); System.out.print(value); //
 		 * display it System.out.print(" "); } // end while
 		 */
 		theStack.revertStack(theStack);
-		while (!theStack.isEmpty()) // until it’s empty,
+		while (!theStack.isEmpty()) // until itï¿½s empty,
 		{ // delete item from stack
 			int value = theStack.pop();
 			System.out.print(value); // display it

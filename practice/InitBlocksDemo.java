@@ -1,4 +1,4 @@
-package com.practice;
+package practice;
 
 class InitBlocksDemo {
  

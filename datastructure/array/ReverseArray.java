@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 public class ReverseArray {
 	/* Function to reverse arr[] from start to end Iterative way Time Complexity: O(n)*/

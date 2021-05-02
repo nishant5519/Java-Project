@@ -1,12 +1,10 @@
-package com.datastructure.array;
+package array;
 
-import static org.junit.Assert.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.junit.Test;
 
 public class FindFirstNonRepetitiveCharacterinGivenString {
 
@@ -33,12 +31,6 @@ public class FindFirstNonRepetitiveCharacterinGivenString {
 
 	}
 
-	@Test
-	public void testFirstNonRepeatedCharacter() {
-		assertEquals('b', FindFirstNonRepetitiveCharacterinGivenString.findCharacter("abcdefghija"));
-		assertEquals('h', FindFirstNonRepetitiveCharacterinGivenString.findCharacter("hello"));
-		assertEquals('J', FindFirstNonRepetitiveCharacterinGivenString.findCharacter("Java"));
-		assertEquals('i', FindFirstNonRepetitiveCharacterinGivenString.findCharacter("simplest"));
-	}
+	
 
 }

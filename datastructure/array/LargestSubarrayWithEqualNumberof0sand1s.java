@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 public class LargestSubarrayWithEqualNumberof0sand1s {
 	public static void main(String[] args) {

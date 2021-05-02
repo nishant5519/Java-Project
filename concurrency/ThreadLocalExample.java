@@ -1,4 +1,4 @@
-package com.concurrency;
+package concurrency;
 
 import java.text.SimpleDateFormat;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.datastructure.LinkedList;
+package LinkedList;
 
 public class LinkListApp {
 

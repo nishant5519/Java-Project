@@ -1,4 +1,4 @@
-package com.companies.onlinetest;
+package companies.onlinetest;
 
 public class DeadlockApp {
 	public static Object Lock1 = new Object();

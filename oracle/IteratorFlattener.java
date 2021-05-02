@@ -1,4 +1,4 @@
-package com.oracle;
+package oracle;
 
 import java.util.Iterator;
 

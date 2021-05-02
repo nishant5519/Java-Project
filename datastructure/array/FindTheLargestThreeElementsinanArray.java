@@ -1,4 +1,4 @@
-package com.datastructure.array;
+package array;
 
 class FindTheLargestThreeElementsinanArray {
 //	Time complexity is O(n) and extra space is O(1).

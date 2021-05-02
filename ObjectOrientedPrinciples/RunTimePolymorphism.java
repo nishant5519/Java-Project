@@ -1,4 +1,4 @@
-package com.ObjectOrientedPrinciples;
+package ObjectOrientedPrinciples;
 
 public class RunTimePolymorphism {
 	public static void main(String[] args) {

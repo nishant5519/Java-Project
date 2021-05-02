@@ -1,4 +1,4 @@
-package com.concurrency.completableFuture;
+package concurrency;
 
 import java.util.ArrayList;
 import java.util.List;
