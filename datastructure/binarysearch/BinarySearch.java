@@ -1,8 +1,8 @@
-package searching;
+package binarysearch;
 
 import java.util.Scanner;
 
-//Should be sorted,Divide and conquer approach,time complexity O(logn)
+//Should be sorted,time complexity O(logn)
 public class BinarySearch {
 
 	public static void main(String[] args) {
