@@ -1,13 +1,13 @@
 package dynamicprogramming;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Fibonacci {
 	final Map<Integer, Integer> cache = new HashMap<Integer, Integer>();
-	final int MAX = 100;
-	final int NIL = -1;
-	int lookup[] = new int[MAX];
+	final static int MAX = 100;
+	static int lookup[] = new int[MAX];
 
 	/*
 	 * function for nth Fibonacci number Time Complexity: O(n) Extra Space: O(n)
@@ -15,17 +15,13 @@ public class Fibonacci {
 	 */
 	int DPfib1(int n) {
 		if (n <= 1)
-			lookup[n] = n;
+			lookup[n] = n; // or return n
 		if (lookup[n] != -1)
 			return lookup[n];
 		lookup[n] = DPfib1(n - 1) + DPfib1(n - 2);
 		return lookup[n];
 	}
 
-	void _initialize() {
-		for (int i = 0; i < MAX; i++)
-			lookup[i] = NIL;
-	}
 
 	//f1=1,f2=1..
 	int DPfib2(int n) {
@@ -65,7 +61,7 @@ public class Fibonacci {
 		
 		Fibonacci f = new Fibonacci();
 		int n = 3;
-		f._initialize();
+		Arrays.fill(lookup, -1);
 		System.out.println("Fibonacci number using DP is: " + f.DPfib1(n));
 		System.out.println("Fibonacci number using recursion is: " + f.recursiveFib(n));
 	}

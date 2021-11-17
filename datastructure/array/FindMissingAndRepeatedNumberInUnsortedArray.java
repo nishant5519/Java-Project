@@ -9,7 +9,7 @@ public class FindMissingAndRepeatedNumberInUnsortedArray {
 	//Output: Missing = 5, Repeating = 1
 	public static void main(String[] args) {
 	//	int arr[] = { 7, 3, 4, 5, 5, 6, 2 };
-		int arr[] = { 57, 53, 54, 55, 55, 56, 52 }; //8,4,5,6,6,7,3
+		int arr[] = {12 ,7, 5, 1, 13, 1, 10, 8, 11, 9, 2, 4, 3, 6}; //8,4,5,6,6,7,3
 		findNumber(arr);
 	}
 	
